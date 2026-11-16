@@ -2,320 +2,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#F8F3E9">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#F8F3E9">
+<title>Mubeena B | Lifestyle Fitness Coach</title>
+<meta name="description" content="Connect with Mubeena B, Lifestyle Fitness Coach.">
 
-  <title>Mubeena B | Lifestyle Fitness Coach</title>
-  <meta name="description" content="Connect with Mubeena B, Lifestyle Fitness Coach.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --ivory: #F8F3E9;
-      --paper: #FFFCF6;
-      --espresso: #29251F;
-      --olive: #78816A;
-      --taupe: #A99F8E;
-      --line: #E8E0D3;
-    }
+<style>
+:root {
+  --ivory: #F8F3E9;
+  --paper: #FFFCF6;
+  --ink: #292820;
+  --olive: #78816A;
+  --muted: #817B70;
+  --line: #E8E0D3;
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+* { box-sizing: border-box; }
 
-    body {
-      min-height: 100vh;
-      padding: 35px 18px;
-      background: var(--ivory);
-      color: var(--espresso);
-      font-family: Georgia, "Times New Roman", serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 32px 18px;
+  display: grid;
+  place-items: center;
+  background: var(--ivory);
+  color: var(--ink);
+  font-family: "DM Sans", Arial, sans-serif;
+}
 
-    .card {
-      width: 100%;
-      max-width: 440px;
-      padding: 42px 32px 30px;
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 5px;
-      text-align: center;
-      box-shadow: 0 18px 55px rgba(65, 54, 38, 0.07);
-    }
+.card {
+  width: min(100%, 460px);
+  padding: 58px 38px 38px;
+  text-align: center;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: 0 22px 65px rgba(48,43,32,.06);
+}
 
-    .monogram {
-      width: 65px;
-      height: 65px;
-      margin: 0 auto 22px;
-      border: 1px solid var(--olive);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--olive);
-      font-size: 25px;
-      font-style: italic;
-    }
+.eyebrow {
+  margin: 0 0 20px;
+  color: var(--olive);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
 
-    .eyebrow {
-      font-family: Arial, sans-serif;
-      color: var(--olive);
-      font-size: 10px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 13px;
-    }
+h1 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(42px, 10vw, 54px);
+  font-weight: 400;
+  letter-spacing: -1.5px;
+  line-height: 1.12;
+}
 
-    h1 {
-      font-size: clamp(34px, 8vw, 43px);
-      font-weight: normal;
-      letter-spacing: -1.5px;
-      margin-bottom: 9px;
-    }
+.role {
+  margin: 13px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 1.1px;
+}
 
-    .role {
-      font-family: Arial, sans-serif;
-      font-size: 13px;
-      color: #827969;
-      letter-spacing: 1px;
-    }
+.divider {
+  width: 42px;
+  height: 1px;
+  margin: 32px auto 27px;
+  background: var(--olive);
+}
 
-    .ornament {
-      width: 48px;
-      height: 1px;
-      background: var(--olive);
-      margin: 27px auto;
-    }
+.intro {
+  max-width: 300px;
+  margin: 0 auto 34px;
+  color: #6F6A60;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 18px;
+  line-height: 1.65;
+}
 
-    .intro {
-      font-size: 16px;
-      line-height: 1.8;
-      color: #6D6559;
-      margin-bottom: 27px;
-    }
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
 
-    .actions {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 11px;
-    }
+.action {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 10px;
+  border: 1px solid #D7D9CE;
+  background: transparent;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .2px;
+  transition: .2s ease;
+}
 
-    .action {
-      min-height: 49px;
-      padding: 14px 8px;
-      border: 1px solid var(--olive);
-      border-radius: 3px;
-      color: var(--espresso);
-      text-decoration: none;
-      font-family: Arial, sans-serif;
-      font-size: 12px;
-      letter-spacing: .4px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: .2s ease;
-    }
+.action.primary {
+  border-color: var(--olive);
+  background: var(--olive);
+  color: #fffdf7;
+}
 
-    .action:hover {
-      background: var(--olive);
-      color: white;
-    }
+.action:hover {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: #fffdf7;
+}
 
-    .action.primary {
-      background: var(--espresso);
-      border-color: var(--espresso);
-      color: var(--ivory);
-    }
+.save-contact {
+  margin-top: 28px;
+  padding: 5px;
+  border: 0;
+  background: transparent;
+  color: var(--olive);
+  font: 500 12px "DM Sans", Arial, sans-serif;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
 
-    .action.primary:hover {
-      background: var(--olive);
-      border-color: var(--olive);
-    }
+footer {
+  margin-top: 37px;
+  color: #A69F92;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 
-    .instagram {
-      grid-column: 1 / -1;
-    }
-
-    .contact-info {
-      margin-top: 27px;
-      padding-top: 22px;
-      border-top: 1px solid var(--line);
-      font-family: Arial, sans-serif;
-    }
-
-    .contact-info a {
-      display: block;
-      margin: 10px 0;
-      color: #70685C;
-      text-decoration: none;
-      font-size: 13px;
-      overflow-wrap: anywhere;
-    }
-
-    .qr-section {
-      margin-top: 27px;
-      padding-top: 22px;
-      border-top: 1px solid var(--line);
-    }
-
-    .qr-section p {
-      font-family: Arial, sans-serif;
-      color: var(--olive);
-      font-size: 10px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 13px;
-    }
-
-    .qr-section img {
-      width: 135px;
-      height: 135px;
-      padding: 8px;
-      background: white;
-      border: 1px solid var(--line);
-      border-radius: 3px;
-    }
-
-    .save-contact {
-      display: inline-block;
-      margin-top: 17px;
-      color: var(--olive);
-      font-family: Arial, sans-serif;
-      font-size: 12px;
-      text-decoration: underline;
-      text-underline-offset: 4px;
-      cursor: pointer;
-      background: none;
-      border: none;
-    }
-
-    footer {
-      margin-top: 27px;
-      color: #A69B8B;
-      font-family: Arial, sans-serif;
-      font-size: 10px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
-
-    @media (max-width: 380px) {
-      .card {
-        padding: 34px 21px 25px;
-      }
-    }
-  </style>
+@media (max-width: 390px) {
+  .card { padding: 48px 22px 32px; }
+  .actions { gap: 9px; }
+}
+</style>
 </head>
 
 <body>
+<main class="card">
 
-  <main class="card">
+  <p class="eyebrow">Lifestyle · Wellness</p>
 
-    <div class="monogram">M</div>
+  <h1>Mubeena B</h1>
+  <p class="role">Lifestyle Fitness Coach</p>
 
-    <p class="eyebrow">Welcome to my space</p>
+  <div class="divider"></div>
 
-    <h1>Mubeena . B</h1>
+  <p class="intro">
+    Small steps. Stronger habits. A healthier you.
+  </p>
 
-    <p class="role">Lifestyle Fitness Coach</p>
+  <nav class="actions" aria-label="Contact links">
 
-    <div class="ornament"></div>
+    <a class="action primary" href="tel:+919080141919">
+      Call
+    </a>
 
-    <p class="intro">
-      A little step towards a healthier lifestyle
-      begins with the right connection.
-    </p>
+    <a class="action"
+       href="https://wa.me/919080141919"
+       target="_blank" rel="noopener noreferrer">
+      WhatsApp
+    </a>
 
-    <div class="actions">
+    <a class="action" href="mailto:trainwithmubi@gmail.com">
+      Email
+    </a>
 
-      <a class="action primary"
-         href="tel:+919080141919">
-        Call Me
-      </a>
+    <a class="action"
+       href="https://www.instagram.com/Mubi_fitness_15/"
+       target="_blank" rel="noopener noreferrer">
+      Instagram
+    </a>
 
-      <a class="action"
-         href="https://wa.me/919080141919"
-         target="_blank"
-         rel="noopener">
-        WhatsApp
-      </a>
+  </nav>
 
-      <a class="action"
-         href="mailto:trainwithmubi@gmail.com">
-        Email Me
-      </a>
+  <button class="save-contact" onclick="saveContact()">
+    Save Contact
+  </button>
 
-      <a class="action instagram"
-         href="https://www.instagram.com/Mubi_fitness_15/"
-         target="_blank"
-         rel="noopener">
-        Instagram · @Mubi_fitness_15
-      </a>
+  <footer>Connect · Move · Grow</footer>
 
-    </div>
+</main>
 
-    <div class="contact-info">
-      <a href="tel:+919080141919">9080141919</a>
-      <a href="mailto:trainwithmubi@gmail.com">
-        trainwithmubi@gmail.com
-      </a>
-    </div>
+<script>
+function saveContact() {
+  const vcard = [
+    "BEGIN:VCARD",
+    "VERSION:3.0",
+    "FN:Mubeena B",
+    "N:B;Mubeena;;;",
+    "TITLE:Lifestyle Fitness Coach",
+    "TEL;TYPE=CELL:+919080141919",
+    "EMAIL:trainwithmubi@gmail.com",
+    "URL:https://www.instagram.com/Mubi_fitness_15/",
+    "END:VCARD"
+  ].join("\r\n");
 
-    <div class="qr-section">
-      <p>Scan to connect</p>
+  const blob = new Blob([vcard], {
+    type: "text/vcard;charset=utf-8"
+  });
 
-      <img
-        src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https%3A%2F%2Fmubeena-fitness.github.io%2Fmubeena-vcard%2F"
-        alt="QR code for Mubeena's digital business card"
-        width="135"
-        height="135"
-      >
-
-      <br>
-
-      <button class="save-contact" onclick="saveContact()">
-        Save Contact to Phone
-      </button>
-    </div>
-
-    <footer>
-      Connect · Move · Grow
-    </footer>
-
-  </main>
-
-  <script>
-    function saveContact() {
-      const vcard = [
-        "BEGIN:VCARD",
-        "VERSION:3.0",
-        "FN:Mubeena B",
-        "N:B;Mubeena;;;",
-        "TITLE:Lifestyle Fitness Coach",
-        "TEL;TYPE=CELL:+919080141919",
-        "EMAIL:trainwithmubi@gmail.com",
-        "URL:https://www.instagram.com/Mubi_fitness_15/",
-        "END:VCARD"
-      ].join("\r\n");
-
-      const blob = new Blob([vcard], {
-        type: "text/vcard;charset=utf-8"
-      });
-
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement("a");
-
-      link.href = url;
-      link.download = "Mubeena-B.vcf";
-      link.click();
-
-      URL.revokeObjectURL(url);
-    }
-  </script>
-
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "Mubeena-B.vcf";
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+}
+</script>
 </body>
 </html>
-
